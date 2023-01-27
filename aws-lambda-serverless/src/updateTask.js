@@ -1,6 +1,6 @@
 const AWS = require("aws-sdk");
 
-const updateTask = async (even) => {
+const updateTask = async (event) => {
 
     const dynamodb = new AWS.DynamoDB.DocumentClient();
     const {id} = event.pathParameters;

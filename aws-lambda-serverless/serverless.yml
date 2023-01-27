@@ -10,7 +10,7 @@ provider:
       Action:
         - dynamodb:*
       Resource:
-        - 
+        - arn:aws:dynamodb::table/TaskTable
 
 functions:
   hello:
@@ -47,6 +47,13 @@ functions:
       - httpApi:
           path: /updateTask/{id}
           method: put
+
+  deleteTask:
+    handler: src/deleteTask.deleteTask
+    events:
+      - httpApi:
+          path: /deleteTask/{id}
+          method: delete
 
 resources: 
   Resources:
