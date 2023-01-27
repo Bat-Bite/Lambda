@@ -10,7 +10,7 @@ provider:
       Action:
         - dynamodb:*
       Resource:
-        - arn:aws:dynamodb::table/TaskTable
+        - arn:aws:dynamodb:us-east-1::table/TaskTable
 
 functions:
   hello:
